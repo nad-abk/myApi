@@ -1,0 +1,36 @@
+!<!DOCTYPE html>
+
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>My Todo List</title>
+        <link rel="stylesheet" type="text/css" href="application.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    </header>
+    <body>
+        <h1 style="text-align: center;">Home Page</h1>
+        <form 
+            accept-charset="UTF-8" 
+            action="http://localhost:3001/todos" 
+            method="POST" 
+            id="todo_form" 
+            autocomplete="off"
+        >
+            <input type="text" name="todo[task]" value="" id="task_input"/>
+            <input 
+                type="submit" 
+                value="Submit" 
+                onclick="window.sendForm(event)" 
+                class="task_submit"
+            />
+        </form>
+        <div id="container" style="margin:2em;border: 2px solide black;">
+            Todo #1 : Make the app.
+            Todo #2 : Push to repo.
+        </div>
+    </body>
+    <footer>
+        <script type="text/javascript" src="application.js"></script>
+    </footer>
+</html>
